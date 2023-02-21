@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    font-family: "Satoshi", sans-serif;
+    height: 100%;
+  }
+  .header {
+    @apply absolute top-0 left-0  flex w-full justify-center gap-4 p-4 md:justify-start;
+  }
+  .points {
+    @apply absolute h-5 w-5 -translate-x-1/2 -translate-y-1/2 rounded-full  bg-slate-800;
+  }
+  .btn {
+    @apply cursor-pointer rounded bg-slate-800 px-8 py-2 text-xl  text-white;
+  }
+  .btn-disabled {
+    @apply cursor-not-allowed bg-slate-400;
+  }
+}
